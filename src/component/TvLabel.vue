@@ -5,7 +5,7 @@
       backgroundColor: colorWithOpacity,
       border: `2px solid ${color}`,
     }"
-    @click="$emit('handleClick')"
+    @click="handleClick"
   >
     <slot></slot>
     <i
@@ -42,6 +42,11 @@ export default {
         color.substring(2, 4),
         16
       )}, ${parseInt(color.substring(4, 6), 16)}, 0.4)`;
+    },
+  },
+  methods: {
+    handleClick() {
+      this.$emit("click");
     },
   },
 };

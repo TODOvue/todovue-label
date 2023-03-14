@@ -7,6 +7,7 @@
         :is-edit="demo.buttonProps.isEdit"
         :is-remove="demo.buttonProps.isRemove"
         :color="demo.color"
+        @click="clickDemo(demo)"
       >
         {{ demo.buttonText }}
       </tv-label>
@@ -46,6 +47,11 @@ export default {
   components: {
     TvLabel,
     TvDemo,
+  },
+  methods: {
+    clickDemo(demo) {
+      console.log("click demo", demo);
+    },
   },
 };
 </script>
