@@ -101,22 +101,26 @@ if (typeof window !== 'undefined') {
 
 ;// CONCATENATED MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
 var external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject = require("vue");
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/component/TvLabel.vue?vue&type=template&id=29d1f26d&scoped=true
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/component/TvLabel.vue?vue&type=template&id=499bd824
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("div", {
-    class: "label",
+    class: "tv-label",
     style: (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.normalizeStyle)({
       backgroundColor: $options.colorWithOpacity,
       border: `2px solid ${$props.color}`
     }),
-    onClick: _cache[0] || (_cache[0] = $event => _ctx.$emit('handleClick'))
-  }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.renderSlot)(_ctx.$slots, "default", {}, undefined, true), $props.isEdit || $props.isRemove ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("i", {
-    key: 0,
-    class: (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.normalizeClass)(`icon-${$props.isEdit ? 'edit' : 'remove'}`)
+    onClick: _cache[0] || (_cache[0] = (...args) => $options.handleClick && $options.handleClick(...args))
+  }, [!$props.text ? (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.renderSlot)(_ctx.$slots, "default", {
+    key: 0
+  }) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createCommentVNode)("", true), $props.text ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)(external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.Fragment, {
+    key: 1
+  }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createTextVNode)((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.toDisplayString)($props.text), 1)], 64)) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createCommentVNode)("", true), $props.isEdit || $props.isRemove ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createElementBlock)("i", {
+    key: 2,
+    class: (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.normalizeClass)(["tv-label-icon", `tv-icon-position-${$props.iconPosition} tv-icon-${$props.isEdit ? 'edit' : 'remove'}`])
   }, null, 2)) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_namespaceObject.createCommentVNode)("", true)], 4);
 }
-;// CONCATENATED MODULE: ./src/component/TvLabel.vue?vue&type=template&id=29d1f26d&scoped=true
+;// CONCATENATED MODULE: ./src/component/TvLabel.vue?vue&type=template&id=499bd824
 
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[1]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/component/TvLabel.vue?vue&type=script&lang=js
 /* harmony default export */ var TvLabelvue_type_script_lang_js = ({
@@ -133,6 +137,14 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     isRemove: {
       type: Boolean,
       default: false
+    },
+    iconPosition: {
+      type: String,
+      default: "right"
+    },
+    text: {
+      type: String,
+      default: ""
     }
   },
   computed: {
@@ -143,15 +155,15 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       const color = this.color.substring(1);
       return `rgba(${parseInt(color.substring(0, 2), 16)}, ${parseInt(color.substring(2, 4), 16)}, ${parseInt(color.substring(4, 6), 16)}, 0.4)`;
     }
+  },
+  methods: {
+    handleClick() {
+      this.$emit("click");
+    }
   }
 });
 ;// CONCATENATED MODULE: ./src/component/TvLabel.vue?vue&type=script&lang=js
  
-;// CONCATENATED MODULE: ./node_modules/mini-css-extract-plugin/dist/loader.js??clonedRuleSet-12.use[0]!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/component/TvLabel.vue?vue&type=style&index=0&id=29d1f26d&scoped=true&lang=css
-// extracted by mini-css-extract-plugin
-
-;// CONCATENATED MODULE: ./src/component/TvLabel.vue?vue&type=style&index=0&id=29d1f26d&scoped=true&lang=css
-
 // EXTERNAL MODULE: ./node_modules/vue-loader/dist/exportHelper.js
 var exportHelper = __webpack_require__(89);
 ;// CONCATENATED MODULE: ./src/component/TvLabel.vue
@@ -160,9 +172,7 @@ var exportHelper = __webpack_require__(89);
 
 
 ;
-
-
-const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.Z)(TvLabelvue_type_script_lang_js, [['render',render],['__scopeId',"data-v-29d1f26d"]])
+const __exports__ = /*#__PURE__*/(0,exportHelper/* default */.Z)(TvLabelvue_type_script_lang_js, [['render',render]])
 
 /* harmony default export */ var TvLabel = (__exports__);
 ;// CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
