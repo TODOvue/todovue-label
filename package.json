@@ -3,7 +3,6 @@
   "version": "1.0.2",
   "private": false,
   "main": "dist/tvlabel.common.js",
-  "style": "dist/tvlabel.css",
   "author": "Cristhian Daza",
   "description": "Component label created for the TodoVue blog",
   "repository": {
@@ -23,13 +22,14 @@
   },
   "scripts": {
     "demo": "vue-cli-service serve",
-    "test:unit": "vue-cli-service test:unit",
+    "test:unit": "vue-cli-service test:unit --coverage",
     "lint": "vue-cli-service lint",
     "build": "vue-cli-service build --target lib --name tvlabel src/component/TvLabel.vue --config webpack.config.js"
   },
   "dependencies": {
     "core-js": "^3.8.3",
-    "todovue-demo": "^1.0.0",
+    "todovue-css": "^1.2.0",
+    "todovue-demo": "^2.1.1",
     "vue": "^3.2.13"
   },
   "devDependencies": {

@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TvButton Component should matches snapshot 1`] = `
+<div class="tv-label" style="background-color: rgba(79, 192, 141, 0.4); border: 2px solid #4fc08d;">
+  <!--v-if-->Vue
+  <!--v-if-->
+</div>
+`;
