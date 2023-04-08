@@ -35,7 +35,7 @@ export const demos = [
     id: 5,
     title: "TvLabel with icon edit, right (default)",
     propsData: { text: "Javascript", isEdit: true, color: "#F0DB4F" },
-    html: `<tv-label isEdit>
+    html: `<tv-label isEdit  color="#F0DB4F">
   Javascript
 </tv-label>`,
   },
@@ -48,7 +48,7 @@ export const demos = [
       color: "#1572B6",
       iconPosition: "left",
     },
-    html: `<tv-label isRemove iconPosition="left">
+    html: `<tv-label isRemove color="#1572B6" iconPosition="left">
   CSS
 </tv-label>`,
   },
