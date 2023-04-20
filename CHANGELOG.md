@@ -1,5 +1,12 @@
 # Changelog **TODOvue Label**
 
+## v2.1.0
+### Dependencies Update
+* Update `todovue-css` to version 1.3.0
+* Update `todovue-demo` to version 2.2.1
+### Features
+* The script is updated to setup api
+
 ## v2.0.1
 ### Fixes
 * The mocks for the demo are updated

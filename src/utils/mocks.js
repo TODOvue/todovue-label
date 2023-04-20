@@ -2,15 +2,21 @@ export const demos = [
   {
     id: 1,
     title: "TvLabel Default",
-    propsData: { text: "Default" },
+    propsData: { textLabel: "Default" },
     html: `<tv-label>
   Default
 </tv-label>`,
   },
   {
+    id: 7,
+    title: "TvLabel Default using props instead of slot",
+    propsData: { textLabel: "Default", color: "#4FB7C0" },
+    html: `<tv-label textLabel="Default"  color="#4FB7C0" />`,
+  },
+  {
     id: 2,
     title: "TvLabel with color and text",
-    propsData: { text: "Vue", color: "#4FC08D" },
+    propsData: { textLabel: "Vue", color: "#4FC08D" },
     html: `<tv-label color="#4FC08D">
   Vue
 </tv-label>`,
@@ -18,7 +24,7 @@ export const demos = [
   {
     id: 3,
     title: "TvLabel with color and text 2",
-    propsData: { text: "HTML", color: "#E34F26" },
+    propsData: { textLabel: "HTML", color: "#E34F26" },
     html: `<tv-label color="#61DAFB">
   HTML
 </tv-label>`,
@@ -26,7 +32,7 @@ export const demos = [
   {
     id: 4,
     title: "TvLabel with color and text 3",
-    propsData: { text: "Git - GitHub", color: "#F05032" },
+    propsData: { textLabel: "Git - GitHub", color: "#F05032" },
     html: `<tv-label color="#DD0031">
   Git - GitHub
 </tv-label>`,
@@ -34,7 +40,7 @@ export const demos = [
   {
     id: 5,
     title: "TvLabel with icon edit, right (default)",
-    propsData: { text: "Javascript", isEdit: true, color: "#F0DB4F" },
+    propsData: { textLabel: "Javascript", isEdit: true, color: "#F0DB4F" },
     html: `<tv-label isEdit color="#F0DB4F">
   Javascript
 </tv-label>`,
@@ -43,7 +49,7 @@ export const demos = [
     id: 6,
     title: "TvLabel with icon remove, left",
     propsData: {
-      text: "CSS",
+      textLabel: "CSS",
       isRemove: true,
       color: "#1572B6",
       iconPosition: "left",

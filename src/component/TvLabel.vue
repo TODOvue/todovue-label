@@ -7,8 +7,8 @@
     }"
     @click="handleClick"
   >
-    <slot v-if="!text"></slot>
-    <template v-if="text">{{ text }}</template>
+    <slot v-if="!textLabel"></slot>
+    <template v-if="textLabel">{{ textLabel }}</template>
     <i
       v-if="isEdit || isRemove"
       class="tv-label-icon"
@@ -20,6 +20,7 @@
 </template>
 
 <script>
+import { computed } from "vue";
 export default {
   name: "TvLabel",
   props: {
@@ -39,28 +40,33 @@ export default {
       type: String,
       default: "right",
     },
-    text: {
+    textLabel: {
       type: String,
       default: "",
     },
   },
-  computed: {
-    colorWithOpacity() {
-      if (!this.color) {
+  setup(props, { emit }) {
+    const colorWithOpacity = computed(() => {
+      if (!props.color) {
         return "";
       }
-      const color = this.color.substring(1);
+      const color = props.color.substring(1);
       return `rgba(${parseInt(color.substring(0, 2), 16)}, ${parseInt(
         color.substring(2, 4),
         16
       )}, ${parseInt(color.substring(4, 6), 16)}, 0.4)`;
-    },
+    });
+
+    const handleClick = () => {
+      emit("click", {});
+    };
+
+    return {
+      colorWithOpacity,
+      handleClick,
+    };
   },
-  methods: {
-    handleClick() {
-      this.$emit("click");
-    },
-  },
+  emits: ["click"],
 };
 </script>
 

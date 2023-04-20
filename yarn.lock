@@ -7352,19 +7352,19 @@ to-regex-range@^5.0.1:
   dependencies:
     is-number "^7.0.0"
 
-todovue-css@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/todovue-css/-/todovue-css-1.2.0.tgz#79d1bf34704c434cd121b97d1e6684ed5f1c6fcb"
-  integrity sha512-0rfKqmO5MoK91eeQBy8mxQx+8KPjK258MkigZmbJErmioR4VDtzSCmhvHe0GnM+y42hXRtYef/MI9sfxpgnlGA==
+todovue-css@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/todovue-css/-/todovue-css-1.3.0.tgz#ecee4d986eef6cacb5375cec1d746a369a6cd7d5"
+  integrity sha512-+X5DYwDOHZfAs+HRcDpFvO7o9XBZunMluwSWcdBxSMF5d66DJvqdWHctW1ta0lB2J+K104+pszDAa9OB+pr68w==
 
-todovue-demo@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/todovue-demo/-/todovue-demo-2.1.1.tgz#3848a55ac6d8e72ffe7dc8df2bb16af0dbd8a887"
-  integrity sha512-fbxYuDTXyEhAeuSCYX1j1aWFbIuYx/+E9OBdx3BidRGrRZYEwBNLXuqqaj0VwoLq3RnuOCiO6lLqFabQxwxolw==
+todovue-demo@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/todovue-demo/-/todovue-demo-2.2.1.tgz#4dc66765973bba4da889a34310b7e607ae553c14"
+  integrity sha512-ff/u3YEMajkFuc3ESokeYfB43bqkH4FHhtSBia1Z4KMx+xW8+oojE6EuL9ACVn6ExVS/g9AOhZl6Y00FVLd/BQ==
   dependencies:
     core-js "^3.8.3"
     highlight.js "^11.7.0"
-    todovue-css "^1.2.0"
+    todovue-css "^1.3.0"
     vue "^3.2.13"
     vue-highlight-code "^0.1.16"
 

@@ -1,15 +1,15 @@
 <template>
-  <tv-demo :component="component" :variants="demos"></tv-demo>
+  <tv-demo :component="component" :variants="demos" />
 </template>
 
 <script>
-import { defineComponent, shallowRef } from "vue";
+import { shallowRef } from "vue";
 import TvDemo from "todovue-demo";
 import TvLabel from "@/component/TvLabel.vue";
 import { demos } from "@/utils/mocks.js";
 
-export default defineComponent({
-  name: "DemoButton",
+export default {
+  name: "DemoLabel",
   setup() {
     const component = shallowRef(TvLabel);
 
@@ -21,7 +21,7 @@ export default defineComponent({
   components: {
     TvDemo,
   },
-});
+};
 </script>
 
 <style></style>
