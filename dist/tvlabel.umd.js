@@ -118,28 +118,29 @@ if (typeof window !== 'undefined') {
 
 // EXTERNAL MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
 var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__(203);
-;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/component/TvLabel.vue?vue&type=template&id=499bd824
+;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/component/TvLabel.vue?vue&type=template&id=302ed2f0
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,external_commonjs_vue_commonjs2_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementBlock)("div", {
     class: "tv-label",
     style: (0,external_commonjs_vue_commonjs2_vue_root_Vue_.normalizeStyle)({
-      backgroundColor: $options.colorWithOpacity,
+      backgroundColor: $setup.colorWithOpacity,
       border: `2px solid ${$props.color}`
     }),
-    onClick: _cache[0] || (_cache[0] = (...args) => $options.handleClick && $options.handleClick(...args))
-  }, [!$props.text ? (0,external_commonjs_vue_commonjs2_vue_root_Vue_.renderSlot)(_ctx.$slots, "default", {
+    onClick: _cache[0] || (_cache[0] = (...args) => $setup.handleClick && $setup.handleClick(...args))
+  }, [!$props.textLabel ? (0,external_commonjs_vue_commonjs2_vue_root_Vue_.renderSlot)(_ctx.$slots, "default", {
     key: 0
-  }) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createCommentVNode)("", true), $props.text ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementBlock)(external_commonjs_vue_commonjs2_vue_root_Vue_.Fragment, {
+  }) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createCommentVNode)("", true), $props.textLabel ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementBlock)(external_commonjs_vue_commonjs2_vue_root_Vue_.Fragment, {
     key: 1
-  }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createTextVNode)((0,external_commonjs_vue_commonjs2_vue_root_Vue_.toDisplayString)($props.text), 1)], 64)) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createCommentVNode)("", true), $props.isEdit || $props.isRemove ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementBlock)("i", {
+  }, [(0,external_commonjs_vue_commonjs2_vue_root_Vue_.createTextVNode)((0,external_commonjs_vue_commonjs2_vue_root_Vue_.toDisplayString)($props.textLabel), 1)], 64)) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createCommentVNode)("", true), $props.isEdit || $props.isRemove ? ((0,external_commonjs_vue_commonjs2_vue_root_Vue_.openBlock)(), (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createElementBlock)("i", {
     key: 2,
     class: (0,external_commonjs_vue_commonjs2_vue_root_Vue_.normalizeClass)(["tv-label-icon", `tv-icon-position-${$props.iconPosition} tv-icon-${$props.isEdit ? 'edit' : 'remove'}`])
   }, null, 2)) : (0,external_commonjs_vue_commonjs2_vue_root_Vue_.createCommentVNode)("", true)], 4);
 }
-;// CONCATENATED MODULE: ./src/component/TvLabel.vue?vue&type=template&id=499bd824
+;// CONCATENATED MODULE: ./src/component/TvLabel.vue?vue&type=template&id=302ed2f0
 
 ;// CONCATENATED MODULE: ./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib/index.js??clonedRuleSet-82.use[1]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/component/TvLabel.vue?vue&type=script&lang=js
+
 /* harmony default export */ var TvLabelvue_type_script_lang_js = ({
   name: "TvLabel",
   props: {
@@ -159,25 +160,30 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       type: String,
       default: "right"
     },
-    text: {
+    textLabel: {
       type: String,
       default: ""
     }
   },
-  computed: {
-    colorWithOpacity() {
-      if (!this.color) {
+  setup(props, {
+    emit
+  }) {
+    const colorWithOpacity = (0,external_commonjs_vue_commonjs2_vue_root_Vue_.computed)(() => {
+      if (!props.color) {
         return "";
       }
-      const color = this.color.substring(1);
+      const color = props.color.substring(1);
       return `rgba(${parseInt(color.substring(0, 2), 16)}, ${parseInt(color.substring(2, 4), 16)}, ${parseInt(color.substring(4, 6), 16)}, 0.4)`;
-    }
+    });
+    const handleClick = () => {
+      emit("click", {});
+    };
+    return {
+      colorWithOpacity,
+      handleClick
+    };
   },
-  methods: {
-    handleClick() {
-      this.$emit("click");
-    }
-  }
+  emits: ["click"]
 });
 ;// CONCATENATED MODULE: ./src/component/TvLabel.vue?vue&type=script&lang=js
  
