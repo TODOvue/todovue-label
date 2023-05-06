@@ -1,0 +1,32 @@
+@import "mixins";
+@import "variables";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  @include fontFamilyAndFontSize($font-family-text, 1rem);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include fontFamilyAndFontSize($font-family-title, 2rem);
+}
+
+.tv {
+  @each $class, $icon in $icons {
+    &-#{$class} {
+      background-image: url($icon);
+    }
+  }
+}
+
+.tv-icon-position-left {
+  @include floatIcon(left, right, 8px);
+}
+
+.tv-icon-position-right {
+  @include floatIcon(right, left, 8px);
+}

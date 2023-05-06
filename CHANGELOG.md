@@ -1,5 +1,12 @@
 # Changelog **TODOvue Label**
 
+## v2.3.0
+### Dependencies Update
+* The `todovue-css` component is removed
+* Update `todovue-demo` to version 3.0.2 as development dependency
+### Features
+* The sass module is added to the project
+
 ## v2.2.0
 ### Dependencies Update
 * Update `todovue-css` to version 1.7.0

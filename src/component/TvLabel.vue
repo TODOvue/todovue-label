@@ -7,8 +7,8 @@
     }"
     @click="handleClick"
   >
-    <slot v-if="!textLabel"></slot>
     <template v-if="textLabel">{{ textLabel }}</template>
+    <slot v-else></slot>
     <i
       v-if="isEdit || isRemove"
       class="tv-label-icon"
@@ -58,7 +58,7 @@ export default {
     });
 
     const handleClick = () => {
-      emit("click", {});
+      emit("clickLabel", {});
     };
 
     return {
@@ -66,8 +66,8 @@ export default {
       handleClick,
     };
   },
-  emits: ["click"],
+  emits: ["clickLabel"],
 };
 </script>
 
-<style></style>
+<style scoped lang="scss" src="../assets/scss/style.scss"></style>
