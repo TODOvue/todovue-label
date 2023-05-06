@@ -2,9 +2,9 @@ name: Pipeline
 
 on:
   push:
-    branches: [*]
+    branches: [master, develop]
   pull_request:
-    branches: [*]
+    branches: [master, develop]
 
 jobs:
   avoid_redundancy:
