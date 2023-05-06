@@ -16,9 +16,9 @@
 - [Props](#props)
 - [Events](#events)
 - [Development](#development)
-- [Changelog](https://github.com/TODOvue/todovue-demo/blob/master/CHANGELOG.md)
-- [Contributing](https://github.com/TODOvue/todovue-demo/blob/master/CONTRIBUTING.md)
-- [License](https://github.com/TODOvue/todovue-demo/blob/master/LICENSE)
+- [Changelog](https://github.com/TODOvue/todovue-label/blob/master/CHANGELOG.md)
+- [Contributing](https://github.com/TODOvue/todovue-label/blob/master/CONTRIBUTING.md)
+- [License](https://github.com/TODOvue/todovue-label/blob/master/LICENSE)
 
 ## Installation
 Install with npm or yarn
@@ -62,10 +62,10 @@ app.mount("#app");
       const clickHandler = () => {
         console.log("clicked");
       }
-    }
 
-    return {
-      clickHandler
+      return {
+        clickHandler
+      }
     }
   }
 </script>
