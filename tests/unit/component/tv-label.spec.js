@@ -15,6 +15,6 @@ describe("TvButton Component", () => {
   it("emits a click event when the label is clicked", () => {
     const wrapper = shallowMount(TvLabel);
     wrapper.find("div").trigger("click");
-    expect(wrapper.emitted("click")).toBeTruthy();
+    expect(wrapper.emitted("clickLabel")).toBeTruthy();
   });
 });

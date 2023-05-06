@@ -1,0 +1,9 @@
+@mixin fontFamilyAndFontSize($font-family, $font-size) {
+  font-family: $font-family;
+  font-size: $font-size;
+}
+
+@mixin floatIcon($direction, $margin, $number) {
+  float: $direction;
+  margin-#{$margin}: $number;
+}

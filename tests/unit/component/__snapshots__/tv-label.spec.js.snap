@@ -3,6 +3,5 @@
 exports[`TvButton Component should matches snapshot 1`] = `
 <div class="tv-label" style="background-color: rgba(79, 192, 141, 0.4); border: 2px solid #4fc08d;" text="Vue">
   <!--v-if-->
-  <!--v-if-->
 </div>
 `;

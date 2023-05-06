@@ -4,7 +4,6 @@
 
 <script>
 import { shallowRef } from "vue";
-import TvDemo from "todovue-demo";
 import TvLabel from "@/component/TvLabel.vue";
 import { demos } from "@/utils/mocks.js";
 
@@ -17,9 +16,6 @@ export default {
       component,
       demos,
     };
-  },
-  components: {
-    TvDemo,
   },
 };
 </script>
