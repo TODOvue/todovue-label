@@ -52,4 +52,4 @@ const { colorWithOpacity, iconSrc } = useLabel(props);
   </div>
 </template>
 
-<style lang="scss" src="../assets/scss/style.scss"></style>
+<style scoped lang="scss" src="../assets/scss/style.scss"></style>
