@@ -35,7 +35,7 @@ You can also import it directly in the **main.js** file, so you don't have to im
 ```js
 import { createApp } from "vue";
 import App from "./App.vue";
-import TvLabel from "todovue-label";
+import TvLabel from "@todovue/tvlabel";
 
 const app = createApp(App);
 app.component("TvLabel", TvLabel);
