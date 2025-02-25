@@ -21,9 +21,9 @@ export default defineConfig({
     }
     : {
       lib: {
-        entry: "src/components/TvButton.vue",
-        name: "TvButton",
-        fileName: format => `todovue-button.${format}.js`,
+        entry: "src/components/TvLabel.vue",
+        name: "TvLabel",
+        fileName: format => `todovue-label.${format}.js`,
         formats: ["es", "cjs"]
       },
       rollupOptions: {
