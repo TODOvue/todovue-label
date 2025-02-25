@@ -1,0 +1,61 @@
+{
+  "name": "@todovue/tvlabel",
+  "private": false,
+  "author": "Cristhian Daza",
+  "description": "Component label created for the TodoVue blog",
+  "license": "MIT",
+  "version": "0.0.0",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TODOvue/todovue-label.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TODOvue/todovue-label/issues"
+  },
+  "keywords": [
+    "todovue",
+    "front-end",
+    "web",
+    "vue",
+    "vuejs",
+    "vue-js",
+    "label",
+    "component",
+    "vue-component",
+    "custom-label"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/todovue-label.es.js",
+      "require": "./dist/todovue-label.cjs.js"
+    }
+  },
+  "main": "dist/todovue-label.cjs.js",
+  "module": "dist/todovue-label.es.js",
+  "types": "dist/todovue-label.d.ts",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:demo": "VITE_BUILD_TARGET=demo vite build",
+    "preview": "vite preview"
+  },
+  "peerDependencies": {
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "sass": "^1.85.0",
+    "vite": "^5.2.0",
+    "vite-plugin-css-injected-by-js": "^3.5.2",
+    "vite-plugin-dts": "^4.5.0"
+  }
+}
