@@ -1,11 +1,10 @@
 <script setup>
-import { computed } from "vue";
-import { useLabel } from "../composable/useLabel.js";
+import { useLabel } from '../composable/useLabel.js';
 
 const props = defineProps({
   color: {
     type: String,
-    default: "",
+    default: '',
   },
   isEdit: {
     type: Boolean,
@@ -17,22 +16,25 @@ const props = defineProps({
   },
   iconPosition: {
     type: String,
-    default: "right",
+    default: 'right',
   },
   textLabel: {
     type: String,
-    default: "",
+    default: '',
   },
   textColor: {
     type: String,
-    default: "inherit",
+    default: 'inherit',
   },
 });
 
-const emit = defineEmits(["clickLabel"]);
+const emit = defineEmits(['clickLabel', 'click']);
 
-
-const { colorWithOpacity, iconContent  } = useLabel(props);
+const {
+  colorWithOpacity,
+  iconContent,
+  handleClick ,
+} = useLabel(props, emit);
 </script>
 
 <template>
@@ -43,7 +45,7 @@ const { colorWithOpacity, iconContent  } = useLabel(props);
       border: `2px solid ${color}`,
       color: textColor,
     }"
-      @click="emit('clickLabel')"
+    @click="handleClick"
   >
     <template v-if="textLabel">{{ textLabel }}</template>
     <slot v-else></slot>

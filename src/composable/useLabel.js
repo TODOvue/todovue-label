@@ -1,6 +1,6 @@
 import { computed } from 'vue';
 
-export const useLabel = (props) => {
+export const useLabel = (props, emit) => {
   const icons = import.meta.glob('../assets/icons/*.svg', { eager: true, query: '?raw', import: 'default' });
   
   const iconSrc = computed(() => {
@@ -23,8 +23,15 @@ export const useLabel = (props) => {
     return `rgba(${r}, ${g}, ${b}, 0.4)`;
   });
   
+  const handleClick = () => {
+    emit('clickLabel');
+    emit('click');
+  };
+  
   return {
     colorWithOpacity,
     iconContent,
+    
+    handleClick,
   };
 }
