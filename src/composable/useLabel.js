@@ -1,22 +1,20 @@
-import { computed } from "vue";
+import { computed } from 'vue';
 
-export const useLabel = (props) => {
-  const icons = import.meta.glob('../assets/icons/*.svg', { eager: true });
-  
-  const processedIcons = Object.keys(icons).reduce((acc, path) => {
-    const key = path.split('/').pop().replace('.svg', '');
-    acc[key] = new URL(icons[path].default, import.meta.url).href;
-    return acc;
-  }, {});
+export const useLabel = (props, emit) => {
+  const icons = import.meta.glob('../assets/icons/*.svg', { eager: true, query: '?raw', import: 'default' });
   
   const iconSrc = computed(() => {
-    if (props.isEdit) return processedIcons['edit'];
-    if (props.isRemove) return processedIcons['remove'];
+    if (props.isEdit) return 'edit';
+    if (props.isRemove) return 'remove';
     return null;
   });
   
+  const iconContent = computed(() => {
+    return iconSrc.value ? icons[`../assets/icons/${iconSrc.value}.svg`] : '';
+  });
+  
   const colorWithOpacity = computed(() => {
-    if (!props?.color?.startsWith("#") || props?.color?.length !== 7) return "";
+    if (!props?.color?.startsWith('#') || props?.color?.length !== 7) return '';
     const [r, g, b] = props.color
       .substring(1)
       .match(/.{2}/g)
@@ -25,8 +23,15 @@ export const useLabel = (props) => {
     return `rgba(${r}, ${g}, ${b}, 0.4)`;
   });
   
+  const handleClick = () => {
+    emit('clickLabel');
+    emit('click');
+  };
+  
   return {
     colorWithOpacity,
-    iconSrc,
+    iconContent,
+    
+    handleClick,
   };
 }

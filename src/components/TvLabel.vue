@@ -1,11 +1,10 @@
 <script setup>
-import { computed } from "vue";
-import { useLabel } from "../composable/useLabel.js";
+import { useLabel } from '../composable/useLabel.js';
 
 const props = defineProps({
   color: {
     type: String,
-    default: "",
+    default: '',
   },
   isEdit: {
     type: Boolean,
@@ -17,18 +16,25 @@ const props = defineProps({
   },
   iconPosition: {
     type: String,
-    default: "right",
+    default: 'right',
   },
   textLabel: {
     type: String,
-    default: "",
+    default: '',
+  },
+  textColor: {
+    type: String,
+    default: 'inherit',
   },
 });
 
-const emit = defineEmits(["clickLabel"]);
+const emit = defineEmits(['clickLabel', 'click']);
 
-
-const { colorWithOpacity, iconSrc } = useLabel(props);
+const {
+  colorWithOpacity,
+  iconContent,
+  handleClick ,
+} = useLabel(props, emit);
 </script>
 
 <template>
@@ -37,17 +43,17 @@ const { colorWithOpacity, iconSrc } = useLabel(props);
     :style="{
       backgroundColor: colorWithOpacity,
       border: `2px solid ${color}`,
+      color: textColor,
     }"
-      @click="emit('clickLabel')"
+    @click="handleClick"
   >
     <template v-if="textLabel">{{ textLabel }}</template>
     <slot v-else></slot>
-    <img
-      :alt="isEdit ? 'edit-icon' : 'remove-icon'"
-      :class="`tv-icon-position-${iconPosition}`"
-      :src="iconSrc"
-      class="tv-label-icon"
+    <span
       v-if="isEdit || isRemove"
+      v-html="iconContent"
+      class="tv-label-icon"
+      :class="`tv-icon-position-${iconPosition}`"
     />
   </div>
 </template>

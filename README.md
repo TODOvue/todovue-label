@@ -60,18 +60,20 @@ app.mount("#app");
 ```
 
 ## Props
-| Name         | Type    | Default | Description                                                              |
-|--------------|---------|---------|--------------------------------------------------------------------------|
-| color        | String  | `''`    | label color in hexadecimal                                               |
-| textLabel    | String  | `''`    | If you don't want to send the name by slot you can send it by property   |
-| isEdit       | Boolean | `false` | If you want to show the edit icon                                        |
-| isRemove     | Boolean | `false` | If you want to show the remove icon                                      |
-| iconPosition | String  | `right` | If you want to show the icons on the `left` or `right` side of the label |
+| Name         | Type    | Default     | Description                                                              |
+|--------------|---------|-------------|--------------------------------------------------------------------------|
+| color        | String  | `''`        | label color in hexadecimal                                               |
+| textLabel    | String  | `''`        | If you don't want to send the name by slot you can send it by property   |
+| isEdit       | Boolean | `false`     | If you want to show the edit icon                                        |
+| isRemove     | Boolean | `false`     | If you want to show the remove icon                                      |
+| iconPosition | String  | `right`     | If you want to show the icons on the `left` or `right` side of the label |
+| textColor    | String  | `'inherit'` | Text color                                                               |
 
 ## Events
 | Name        | Description                                       |
 |-------------|---------------------------------------------------|
 | click-label | Event that is triggered when the label is clicked |
+| click       | Event that is triggered when the label is clicked |
 
 ## Development
 Clone the repository and install the dependencies
