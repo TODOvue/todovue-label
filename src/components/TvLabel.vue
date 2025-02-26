@@ -23,12 +23,16 @@ const props = defineProps({
     type: String,
     default: "",
   },
+  textColor: {
+    type: String,
+    default: "inherit",
+  },
 });
 
 const emit = defineEmits(["clickLabel"]);
 
 
-const { colorWithOpacity, iconSrc } = useLabel(props);
+const { colorWithOpacity, iconContent  } = useLabel(props);
 </script>
 
 <template>
@@ -37,6 +41,7 @@ const { colorWithOpacity, iconSrc } = useLabel(props);
     :style="{
       backgroundColor: colorWithOpacity,
       border: `2px solid ${color}`,
+      color: textColor,
     }"
       @click="emit('clickLabel')"
   >
