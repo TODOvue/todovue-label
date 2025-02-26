@@ -42,12 +42,11 @@ const { colorWithOpacity, iconSrc } = useLabel(props);
   >
     <template v-if="textLabel">{{ textLabel }}</template>
     <slot v-else></slot>
-    <img
-      :alt="isEdit ? 'edit-icon' : 'remove-icon'"
-      :class="`tv-icon-position-${iconPosition}`"
-      :src="iconSrc"
-      class="tv-label-icon"
+    <span
       v-if="isEdit || isRemove"
+      v-html="iconContent"
+      class="tv-label-icon"
+      :class="`tv-icon-position-${iconPosition}`"
     />
   </div>
 </template>
