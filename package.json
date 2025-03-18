@@ -45,14 +45,13 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build:demo": "VITE_BUILD_TARGET=demo vite build",
-    "preview": "vite preview"
+    "build:demo": "cp README.md public/ && VITE_BUILD_TARGET=demo vite build"
   },
   "peerDependencies": {
     "vue": "^3.4.21"
   },
   "devDependencies": {
-    "@todovue/tvdemo": "^1.2.3",
+    "@todovue/tvdemo": "^1.3.2",
     "@vitejs/plugin-vue": "^5.0.4",
     "sass": "^1.85.0",
     "vite": "^5.2.0",

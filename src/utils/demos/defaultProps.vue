@@ -2,14 +2,13 @@
   <tv-label
     :textLabel="properties.name"
     :color="properties.color"
-    @click-label="clickHandler"
+    @click="clickHandler"
   />
 </template>
 
 <script setup>
-import { defineAsyncComponent, ref } from "vue";
-
-const TvLabel = defineAsyncComponent(() => import("../../components/TvLabel.vue"));
+import { ref } from 'vue'
+import TvLabel from '@todovue/tvlabel';
 
 const properties = ref({
   name: "Default",
