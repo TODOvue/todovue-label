@@ -1,13 +1,11 @@
 <template>
-  <tv-label color="#61DAFB" @click-label="clickHandler">
+  <tv-label color="#61DAFB" @click="clickHandler">
     HTML
   </tv-label>
 </template>
 
 <script setup>
-import { defineAsyncComponent } from "vue";
-
-const TvLabel = defineAsyncComponent(() => import("../../components/TvLabel.vue"));
+import TvLabel from '@todovue/tvlabel';
 
 const clickHandler = () => {
   console.log("clicked");
